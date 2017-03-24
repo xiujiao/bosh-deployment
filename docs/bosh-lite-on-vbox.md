@@ -64,7 +64,8 @@
 1. Deploy example deployment
 
     ```
-    $ bosh -e vbox -d zookeeper deploy <(wget -O- https://raw.githubusercontent.com/cppforlife/zookeeper-release/master/manifests/zookeeper.yml)
+    $ wget https://raw.githubusercontent.com/cppforlife/zookeeper-release/master/manifests/zookeeper.yml
+    $ bosh -e vbox -d zookeeper deploy zookeeper.yml
     ```
 
 1. Optionally, set up a local route for `bosh ssh` command
